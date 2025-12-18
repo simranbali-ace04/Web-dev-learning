@@ -19,3 +19,5 @@ let num1= 10; //kind 1
 console.log(num1);
 num1+= 5; //num = num+5
 console.log(num1);
+
+//For complex calculations , the best approach is to use the paranthesis
