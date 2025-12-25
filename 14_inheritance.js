@@ -21,6 +21,7 @@ class Vehicle{
     }
 }
 
+ //Inheritance
 class Car extends Vehicle{
     drive(){
         return `${this.make} : This is an inheritance example`;
@@ -34,4 +35,23 @@ console.log(myCar.drive());
 let vehicle1 = new Vehicle("Porsche", "GTR3");
 
 console.log(vehicle1.make);
+
+//Encapsulation
+
+class bankAccount{
+    #balance = 0;
+
+    deposit(amount){
+        this.#balance += amount;
+        return this.#balance;
+    }
+
+    getBalance(){
+        return `$ ${this.#balance}`
+    }
+}
+
+let account = new bankAccount();
+console.log(account.getBalance());
+
 
