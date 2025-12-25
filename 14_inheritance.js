@@ -79,3 +79,22 @@ let myMachine = new coffeeMachine();
 // console.log(myMachine.start());
 // console.log(myMachine.brewCoffee());
 console.log(myMachine.pressStartButton());
+
+
+//Polymorphism 
+class bird{
+    fly(){
+        return `Flying...`;
+    }
+}
+class penguin extends bird{
+    fly(){
+        return `Penguinsn don't fly`;
+    }
+}
+
+let bird1 = new bird();
+console.log(bird1.fly());
+let penguin1 = new penguin();
+console.log(penguin1.fly());
+
