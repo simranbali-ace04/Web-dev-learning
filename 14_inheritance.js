@@ -55,3 +55,27 @@ let account = new bankAccount();
 console.log(account.getBalance());
 
 
+//Abstraction
+
+class coffeeMachine{
+    start(){
+        //call DB
+        //filter value
+        return `Starting the machine...`;
+    }
+    brewCoffee(){
+        //complex calculations
+        return `Brewing coffee`;
+    }
+
+    pressStartButton(){
+        let msg1= this.start();
+        let msg2 =this.brewCoffee();
+        return `${msg1} + ${msg2}`;
+    }
+}
+
+let myMachine = new coffeeMachine();
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+console.log(myMachine.pressStartButton());
