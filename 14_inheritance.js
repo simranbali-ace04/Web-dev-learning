@@ -98,3 +98,20 @@ console.log(bird1.fly());
 let penguin1 = new penguin();
 console.log(penguin1.fly());
 
+
+//static method
+//These methods are accessed only by the class directly , not by the object
+
+class Calculator {
+    static add(a, b){
+        return a+b;
+    }
+}
+
+// let miniCalc= new Calculator();
+// console.log(miniCalc.add(2, 3));
+
+console.log(Calculator.add(2, 3));
+
+
+
