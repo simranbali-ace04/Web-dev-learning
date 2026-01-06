@@ -114,4 +114,30 @@ class Calculator {
 console.log(Calculator.add(2, 3));
 
 
+//getters and setters
+
+class Employee{
+    #salary;
+    constructor(name, salary){
+        this.name= name;
+        this.#salary= salary;
+    }
+
+    get salary(){
+        return `You are not allowed to see salary`;
+    }
+
+    set salary(value){
+        if(value<0){
+            console.error("Invalid salary");
+        }
+        else{
+            this.#salary= value;
+        }
+    }
+}
+
+let emp= new Employee("Alice", 5000);
+console.log(emp.salary);
+emp.salary= -60000;
 
