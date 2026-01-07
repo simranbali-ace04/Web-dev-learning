@@ -47,3 +47,47 @@ document.getElementById("removeLastTask").addEventListener("click", function(){
     // taskList.removeChild(itemToRemove);
     taskList.lastElementChild.remove();
 });
+
+
+//example 6
+//several event handlings are there like mouseover, mouseup, mousedown, mouseout, dblclick, etc
+document.getElementById("clickMeButton").addEventListener("keydown", function(){
+    alert("chaiCode")
+});
+
+
+//example 7
+document.getElementById("teaList").addEventListener("click", function(event){
+    if(event.target && event.target.matches(".teaItem")){
+        alert("You selected: " + event.target.textContent);
+    }
+});
+
+
+//example 8
+
+//basically form can be submitted by more actions ryt like on enter and click , but click action will be performed by click only and submitted , so to make it more feasible we use submit event listener
+document.getElementById("feedbackForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    let feedback = document.getElementById("feedbackInput").value;
+    console.log(feedback);
+    let feedbackText= document.getElementById("feedbackDisplay");
+    feedbackText.textContent = `feedback is: ${feedback}`;
+    feedbackText.style.backgroundColor= "hotpink";
+    feedbackText.style.color= "black";
+    feedbackText.style.padding= "5px";
+});
+
+
+//example  9
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("domStatus").textContent= "DOM fully loaded";
+});
+
+
+//example 10
+document.getElementById("toggleHighlight").addEventListener("click", function(){
+    let toggle = document.getElementById("descriptionText")
+    toggle.classList.toggle("highlight")
+    
+});
